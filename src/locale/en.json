@@ -1,0 +1,16 @@
+{
+  "moose": "Moose",
+  "logoAlt": "Logo",
+  "pageTitle": "$t(moose)",
+  "pageTitleWithWord": "$t(moose): {{word}}",
+  "tagline": "The fast Arabic dictionary",
+  "status_one": "{{count}} word found in {{milliseconds}} ms",
+  "status_other": "{{count}} words found in {{milliseconds}} ms",
+  "wordSearchBefore": "What does",
+  "wordSearchAfter": "mean?",
+  "wordSearchError": "Please enter a word using Arabic characters.",
+  "searchWiktionary": "Search Wiktionary",
+  "welcome1": "Welcome to Moose!",
+  "welcome2": "Enter an Arabic word to get definitions.",
+  "toggleLanguage": "العربية"
+}

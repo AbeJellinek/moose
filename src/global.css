@@ -1,0 +1,216 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body, #app {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    max-width: min(800px, 100% - 40px);
+    margin-inline: auto;
+    font-family: 'Readex Pro', sans-serif;
+    font-optical-sizing: auto;
+    color: #111;
+    background: #f2ede2;
+}
+
+input, button {
+    font: inherit;
+}
+
+p {
+    margin: 0;
+}
+
+/* Main structure */
+
+#app {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    position: relative;
+}
+
+/* Header */
+
+header {
+    display: flex;
+    align-items: center;
+
+    margin: 2rem 0;
+
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+header .logo {
+    height: 2em;
+    margin-inline-end: 0.1rem;
+}
+
+header .logo img {
+    width: 100%;
+    height: 100%;
+}
+
+header .colon {
+    margin-inline-end: 0.75rem;
+}
+
+header .status {
+    font-size: 0.8rem;
+    font-weight: 300;
+}
+
+header .tagline {
+    margin-inline-end: auto;
+}
+
+header .toggle-language {
+    appearance: none;
+    background: none;
+    border: none;
+    font-size: 1rem;
+    margin-inline-start: 0.5rem;
+    cursor: pointer;
+}
+
+/* Word result list */
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+
+    flex: 1;
+
+    text-align: center;
+}
+
+.message .welcome {
+    font-weight: 600;
+}
+
+.definition {
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+    gap: 1rem;
+    padding: 0.5em 1rem;
+    border-bottom: 1px dashed black;
+}
+
+.components {
+    flex: 1;
+}
+
+.components:lang(en) {
+    direction: ltr;
+}
+
+.components:lang(ar) {
+    direction: rtl;
+    margin-block: 0.8rem;
+}
+
+.component {
+    padding-block: 0.3em;
+    transition: background-color 0.1s ease;
+}
+
+.component:lang(en) {
+    padding-inline: 0.15rem;
+}
+
+.component:first-child {
+    padding-inline-start: 0.3rem;
+    border-start-start-radius: 3px;
+    border-end-start-radius: 3px;
+}
+
+.component:last-child {
+    padding-inline-end: 0.3rem;
+    border-start-end-radius: 3px;
+    border-end-end-radius: 3px;
+}
+
+.definition:not(:hover) .component {
+    background: transparent;
+}
+
+.component[data-component="prefix"] {
+    background: rgba(44, 147, 173, 0.47);
+}
+
+.component[data-component="stem"] {
+    background: rgba(106, 153, 78, 0.47);
+}
+
+.component[data-component="suffix"] {
+    background: rgba(188, 71, 73, 0.47);
+}
+
+.definition .links a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.definition .links .link-wiktionary {
+    padding: 0.5rem;
+    font-family: serif;
+}
+
+.word-search {
+    position: sticky;
+    bottom: 2rem;
+    margin-top: 4rem;
+    margin-inline: 1rem;
+}
+
+.word-search .word-search-error {
+    font-size: 0.9rem;
+    text-align: center;
+    color: #ee1100;
+    margin-bottom: 0.5rem;
+}
+
+.word-search .word-search-field {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.word-search .word-search-field input {
+    flex: 1;
+    align-self: stretch;
+    appearance: none;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid #22222244;
+    padding: 0.5rem;
+}
+
+.word-search .word-search-field input:focus-visible {
+    border-color: #0000bb66;
+}
+
+@media (max-width: 650px) {
+    .status {
+        display: none;
+    }
+
+    .word-search .word-search-field > :not(input) {
+        display: none;
+    }
+}

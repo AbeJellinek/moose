@@ -1,0 +1,19 @@
+{
+  "moose": "موس",
+  "logoAlt": "الشعار",
+  "pageTitle": "$t(moose)",
+  "pageTitleWithWord": "$t(moose): {{word}}",
+  "tagline": "القاموس العربي السريع",
+  "status_zero": "تم العثور على {{count, number}} كلمة في {{milliseconds, number}} ميلي ثانية",
+  "status_one": "تم العثور على كلمة واحدة في {{milliseconds, number}} ميلي ثانية",
+  "status_two": "تم العثور على كلمتين في {{milliseconds, number}} ميلي ثانية",
+  "status_few": "تم العثور على {{count, number}} كلمات في {{milliseconds, number}} ميلي ثانية",
+  "status_many": "تم العثور على {{count, number}} كلمة في {{milliseconds, number}} ميلي ثانية",
+  "wordSearchBefore": "ما معنى",
+  "wordSearchAfter": "؟",
+  "wordSearchError": "الرجاء إدخال الكلمة باستخدام الحروف العربية.",
+  "searchWiktionary": "بحث في ويكاموس",
+  "welcome1": "مرحباََ بكم في موس!",
+  "welcome2": "أدخل كلمة عربية للحصول على الفعريفات.",
+  "toggleLanguage": "English"
+}
