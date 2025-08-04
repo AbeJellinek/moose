@@ -5,6 +5,7 @@ import WordList from './WordList.tsx';
 import { type Word } from '../lib/lexicon';
 import { toggleLanguage } from '../i18n.ts';
 import WordSearch from './WordSearch.tsx';
+import logoSVG from '../assets/logo.svg?inline';
 
 export default function App() {
     let { t, i18n } = useTranslation();
@@ -37,7 +38,7 @@ export default function App() {
         <main>
             <header>
                 <a href="/" className="logo">
-                    <img src="/moose.svg" title={t('moose')} alt={t('logoAlt')} width="46" height="48"/>
+                    <img src={logoSVG} title={t('moose')} alt={t('logoAlt')} width="46" height="48"/>
                 </a>
                 <span className="colon">:</span>
                 <span className="tagline">{t('tagline')}</span>
