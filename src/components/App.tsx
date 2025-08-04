@@ -6,6 +6,7 @@ import { type Word } from '../lib/lexicon';
 import { toggleLanguage } from '../i18n.ts';
 import WordSearch from './WordSearch.tsx';
 import logoSVG from '../assets/logo.svg?inline';
+import githubMarkSVG from '../assets/github-mark.svg?inline';
 
 export default function App() {
     let { t, i18n } = useTranslation();
@@ -54,6 +55,14 @@ export default function App() {
                 >
                     {t('toggleLanguage')}
                 </button>
+                <a
+                    href="https://github.com/AbeJellinek/moose/"
+                    target="_blank"
+                    rel="noreferrer"
+                    className="github-link"
+                >
+                    <img src={githubMarkSVG} alt="GitHub"/>
+                </a>
             </header>
             {search
                 ? <WordList words={results}/>
